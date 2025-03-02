@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BG Video</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .hero {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        );
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .content h1 {
+        font-size: 160px;
+        color: white;
+        word-spacing: 10px;
+        transition: all 0.5s;
+      }
+
+      .content h1:hover {
+        -webkit-text-stroke: 2px white;
+        transform: scale(1.1);
+        color: transparent;
+      }
+    </style>
+    <section class="hero">
+      <video class="bg-video" loop muted autoplay>
+        <source src="roadatnight.mp4" type="video/mp4" />
+      </video>
+
+      <section class="content">
+        <h1>Here We Go</h1>
+      </section>
+    </section>
+  </body>
+</html>
